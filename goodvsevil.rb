@@ -2,8 +2,8 @@ puts 'Welcome to my Good Vs. Evil battlefield simulator!'
 
 def good_vs_evil(good, evil)
   # forces of good
-  good = good.split("")
-  evil = evil.split("")
+  given_good = good.split(" ")
+  given_evil = evil.split(" ")
   good_tally = 0
   evil_tally = 0
   good_forces = {
@@ -25,18 +25,31 @@ def good_vs_evil(good, evil)
     "Wizards" => 10
   }
 
-  puts "---"
-  puts good[5]
-  puts "---"
-  good_tally += good_forces["Hobbits"] * good[0].to_i
-  good_tally += good_forces["Men"] * good[1].to_i
-  good_tally += good_forces["Elves"] * good[2].to_i
-  good_tally += good_forces["Dwarves"] * good[3].to_i
-  good_tally += good_forces["Eagles"] * good[4].to_i
-  good_tally += good_forces["Wizards"] * good[5].to_i
+  good_tally += good_forces["Hobbits"] * given_good[0].to_i
+  good_tally += good_forces["Men"] * given_good[1].to_i
+  good_tally += good_forces["Elves"] * given_good[2].to_i
+  good_tally += good_forces["Dwarves"] * given_good[3].to_i
+  good_tally += good_forces["Eagles"] * given_good[4].to_i
+  good_tally += good_forces["Wizards"] * given_good[5].to_i
 
+  evil_tally += evil_forces["Orcs"] * given_evil[0].to_i
+  evil_tally += evil_forces["Men"] * given_evil[1].to_i
+  evil_tally += evil_forces["Wargs"] * given_evil[2].to_i
+  evil_tally += evil_forces["Goblins"] * given_evil[3].to_i
+  evil_tally += evil_forces["Uruk Hai"] * given_evil[4].to_i
+  evil_tally += evil_forces["Trolls"] * given_evil[5].to_i
+  evil_tally += evil_forces["Wizards"] * given_evil[6].to_i
+
+
+  if good_tally > evil_tally
+    return "Battle Result: Good triumphs over Evil"
   
-  puts good_tally
+  elsif evil_tally > good_tally
+    return "Battle Result: Evil eradicates all trace of Good"
+  else
+    return "Battle Result: No victor on this battle field"
+  end
+  
   
 end
 
