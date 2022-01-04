@@ -1,15 +1,21 @@
 def parts_sums(ls)
-    # your code
-    return [0] if ls.length == 0 || ls.length > 100
-
     all_sums = []
-    n_of_items = ls.length
-    n_of_items.times do
-        all_sums.push(ls.sum) 
-        ls.delete_at(0)
+    return [0] if ls.length == 0 
+    ls.length.times do
+        all_sums.push(ls.sum) && ls.shift
     end
     all_sums.push(0)
     return all_sums
+    
+
+    
+    #n_of_items = ls.length
+    #n_of_items.times do
+     #   all_sums.push(ls.sum) 
+     #   ls.delete_at(0)
+    #end
+    
+    #return all_sums
 end
 
 
