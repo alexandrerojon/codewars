@@ -17,14 +17,18 @@
 
 def get_missing_ingredients(recipe, added)
     #your code here
+    recipe.each do |key, value|
+        puts key
+        puts value
+    end
 end
 
 
 
 
 recipe = {"flour"=>200, "eggs"=>1, "sugar"=>100}
-get_missing_ingredients(recipe, {"flour"=>100}), {"flour"=>100, "eggs"=>1, "sugar"=>100})
-get_missing_ingredients(recipe, {"flour"=>200, "sugar"=>100}), {"eggs"=>1})
+get_missing_ingredients(recipe, {"flour"=>100})
+get_missing_ingredients(recipe, {"flour"=>200, "sugar"=>100})
 get_missing_ingredients(recipe, {"flour"=>200, "eggs"=>1, "sugar"=>100})
 get_missing_ingredients(recipe, {"flour"=>400, "eggs"=>2, "sugar"=>200})
 get_missing_ingredients(recipe, {"flour"=>1000, "eggs"=>5, "sugar"=>500}) 
