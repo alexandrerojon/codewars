@@ -11,41 +11,29 @@
 #foo099 -> foo100
 
 def increment_string(input)
-    #your code here
-    puts input
+
     items = input.split('')
-    length_of_input = (items.length - 1)
-    total_integers = items.select {|item| item.match(/\d/)}
-    case total_integers.length
-        when 3
-            all_numbers = items.select {|item| item.match(/\d/) }.join()
-            puts all_numbers.
-         
-
-           # if items.last.to_i < 9
-            #    items[length_of_input] = items.last.to_i + 1
-           # elsif items.last == 0
-             #   items[length_of_input - 1] = items[length_of_input - 1 ].to_i + 1
-            #end
-        when 2 
-            # all_numbers = items.select {|item| item.match(/\d/) }.join()
-
-            if items.last.to_i < 9
-                items[length_of_input] = items.last.to_i + 1
-            elsif items.last == 0
-                items[length_of_input - 1] = items[length_of_input - 1 ].to_i + 1
-            end
-        when 1
-            all_numbers = items.select {|item| item.match(/\d/) }.join()
-
-        when 0
-            return input
+    first_index = nil
+    last_index = nil
+    for item in items do 
+        if item.match(/\d/) && first_index.nil?
+            first_index = items.index(item)
+        elsif item.match(/\d/) && last_index.nil?
+            last_index = items.rindex(item)
+        elsif item.match(/\d/) && !first_index.nil? && !last_index.nil?
+            index = item.to_i
+            last_index = items.rindex(item)
+        else
+            #skip
+        end
     end
 
-    return items.join("")
+    items[last_index].to_i += 1 if items[last_index].to_i < 9
+    puts first_index
+    puts last_index
 end
 
-
+# .match(/\d/)
 
 #increment_string("foo")
 increment_string("foobar029")
