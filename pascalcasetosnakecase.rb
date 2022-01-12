@@ -11,19 +11,17 @@ def to_underscore(string)
     return string.to_s if string.is_a? Integer
     items = string.split("")
     items.map!{|item| 
-        if item.match(/[A-Z\d]/) 
+        if item.match(/[A-Z]/) 
             item = "_" + item.downcase 
         else 
             item = item
         end
     }
-
-    puts items.join().delete_prefix("_")
-    
+    return items.join().delete_prefix("_")
 end 
 
 
-#to_underscore("TestController") 
-#to_underscore("MoviesAndBooks") 
-#to_underscore("App7Test") 
-to_underscore(1)
+puts to_underscore("TestController") 
+puts to_underscore("MoviesAndBooks") 
+puts to_underscore("App7Test") 
+puts to_underscore(1)
