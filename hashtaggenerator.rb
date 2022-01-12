@@ -14,32 +14,26 @@
 
 
 
+
 def generateHashtag(str)
-    # return false if the string is empty 
     return false if str.empty?
-
-    # split the string into items
     items = str.split(" ")
-    return false if items.length > 140
-
     items.drop_while {|item| item.is_a? Integer}
-
-
     items.map!{ |item| item.capitalize.strip }
 
-    return false if items.empty? || items.length > 140 || items.join('').length > 140 || items.join('').size > 139
+    return false if items.empty? || items.join('').length > 140 || items.join('').size > 139
     return "#" + items.join('')
     
 end
 
   
-# puts generateHashtag("")
-# puts generateHashtag(" " * 200)
-# puts generateHashtag("Do We have A Hashtag")
-# puts generateHashtag("Codewars")
-# puts generateHashtag("Codewars Is Nice")
-# puts generateHashtag("Codewars is nice")
-# puts generateHashtag("code" + " " * 140 + "wars")
-# puts generateHashtag("Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Cat")
+puts generateHashtag("")
+puts generateHashtag(" " * 200)
+puts generateHashtag("Do We have A Hashtag")
+puts generateHashtag("Codewars")
+puts generateHashtag("Codewars Is Nice")
+puts generateHashtag("Codewars is nice")
+puts generateHashtag("code" + " " * 140 + "wars")
+puts generateHashtag("Looooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooooong Cat")
 puts generateHashtag("a" * 139) 
 puts generateHashtag("a" * 140)
