@@ -38,13 +38,35 @@ You can immediatly see that going "NORTH" and immediately "SOUTH" is not reasona
 
 
 def dirReduc(arr)
+  
     arr.length.times do
-        case 
-    end
+        
     
+    arr.map.with_index {|item, ind| 
+        if item == "NORTH" && arr[ind + 1] == "SOUTH"
+            index = (ind + 1)
+            arr.delete_at(ind)
+            arr.delete_at(ind)
+        elsif item == "SOUTH" && arr[ind + 1] == "NORTH"
+            index = (ind + 1)
+            arr.delete_at(ind)
+            arr.delete_at(ind)
+        elsif item == "EAST" && arr[ind + 1] == "WEST"
+            index = (ind + 1)
+            arr.delete_at(ind)
+            arr.delete_at(ind)
+        elsif item == "WEST" && arr[ind + 1] == "EAST"
+            index = (ind + 1)
+            arr.delete_at(ind)
+            arr.delete_at(ind)
+        end
+    
+    }
+    end
+    return arr
 end
 
-dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"])
-dirReduc(["NORTH", "WEST", "SOUTH", "EAST"])
+puts dirReduc(["NORTH", "SOUTH", "SOUTH", "EAST", "WEST", "NORTH", "WEST"])
+puts dirReduc(["NORTH", "WEST", "SOUTH", "EAST"])
 
 
