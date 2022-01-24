@@ -38,10 +38,7 @@ You can immediatly see that going "NORTH" and immediately "SOUTH" is not reasona
 
 
 def dirReduc(arr)
-  
     arr.length.times do
-        
-    
     arr.map.with_index {|item, ind| 
         if item == "NORTH" && arr[ind + 1] == "SOUTH"
             index = (ind + 1)
@@ -60,7 +57,6 @@ def dirReduc(arr)
             arr.delete_at(ind)
             arr.delete_at(ind)
         end
-    
     }
     end
     return arr
