@@ -21,5 +21,8 @@ def josephus_survivor(n,k)
 end
 
 josephus_survivor(7,3)
-
+josephus_survivor(11,19)
+josephus_survivor(1,300)
+josephus_survivor(14,2)
+josephus_survivor(100,1) 
 
