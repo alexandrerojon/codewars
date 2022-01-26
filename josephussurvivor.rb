@@ -17,7 +17,8 @@ Notes and tips: using the solution to the other kata to check your function may 
 =end
 
 def josephus_survivor(n,k)
-    #your code here
+    range = (1..n).to_a
+    range.step(2) {|item| puts item}
 end
 
 josephus_survivor(7,3)
