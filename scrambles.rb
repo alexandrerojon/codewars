@@ -19,23 +19,20 @@ def scramble(s1,s2)
 
     s1.split('').select { |item| 
         if second_word.include? item 
+            index = second_word.index(item)
             first_word << item
-            second_word.delete(item)
+            second_word.delete_at(index)
         end
     }
     first_word = first_word.sort
     second_word = second_word.sort
-
     third_word = s2.split('').sort
-    puts "----"
-    puts first_word.join()
-    puts third_word.join()
+
     if first_word.join() == third_word.join()
         return true
     else
         return false  
     end
-
 end
 
 
