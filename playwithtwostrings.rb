@@ -30,7 +30,7 @@ There are some static tests at the beginning and many random tests if you submit
 
 
 def work_on_strings(a, b)
-    return
+    
 end
 
 
