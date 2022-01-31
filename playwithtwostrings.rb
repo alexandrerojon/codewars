@@ -9,7 +9,7 @@ I think that's all;-)...
 
 Some easy examples:
 
-Input: "abc" and "cde"      => Output: "abCCde" 
+Input: "abc" and "cde"      => Output: "abCCde"
 Input: "ab" and "aba"       => Output: "aBABA"
 Input: "abab" and "bababa"  => Output: "ABABbababa"
 Once again for the last example - description from KenKamau, see discourse;-):
@@ -30,7 +30,7 @@ There are some static tests at the beginning and many random tests if you submit
 
 
 def work_on_strings(a, b)
-    
+
 end
 
 
