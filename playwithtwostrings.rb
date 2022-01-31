@@ -30,12 +30,33 @@ There are some static tests at the beginning and many random tests if you submit
 
 
 def work_on_strings(a, b)
+  first_word = a.split('')
+  first_word.map! { |letter|
+    if b.include? letter
+      letter.upcase!
+    else
+      letter = letter
+    end
+  }
 
+  second_word = b.split('')
+  second_word.map! { |letter|
+    if a.include? letter
+      letter.upcase!
+    else
+      letter = letter
+    end
+  }
+  return (first_word.join() + second_word.join()).to_s
 end
 
 
 
-work_on_strings("abc","cde")
-work_on_strings("abcdeFgtrzw", "defgGgfhjkwqe")
-work_on_strings("abcdeFg", "defgG")
-work_on_strings("abab", "bababa")
+puts work_on_strings("abc","cde")
+puts work_on_strings("abcdeFgtrzw", "defgGgfhjkwqe")
+puts work_on_strings("abcdeFg", "defgG")
+puts work_on_strings("abab", "bababa")
+
+
+abcDeFGtrzWDEFGgGFhjkWqE
+abcDEFGtrzWDEfGGGfhjkWqE
