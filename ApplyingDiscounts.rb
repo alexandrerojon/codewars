@@ -13,7 +13,11 @@ There won't be any awkward decimal numbers, only 0.5 to deal with.
 =end
 
 def get_discounts(nums, d)
-
+  discount = d.to_i
+  remainder = (100 - discount)
+  for item in nums do
+    sum = item * 0.remainder
+  end
 end
 
 
