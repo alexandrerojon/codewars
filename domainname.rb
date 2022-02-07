@@ -19,14 +19,6 @@ def domain_name(url)
     entire_string = entire_string.slice(0, dot_index)
   end
 
-  # Statement that returns an array with everything following the dot if it
-  # comes at the end of the array
-  if entire_string[-4] == "."
-    entire_string = entire_string.slice(0..-5)
-  elsif entire_string[-3] == "."
-    entire_string = entire_string.slice(0..-4)
-  end
-
   # join the elements into a stirng to call include method on it
   word = entire_string.join()
 
@@ -41,6 +33,22 @@ def domain_name(url)
     word = entire_string.slice(8..-1)
   end
 
+
+
+  # Statement that returns an array with everything following the dot if it
+  # comes at the end of the array
+  if word.is_a? String
+    word = word.split("")
+    index = word.index(".")
+    index = (index.to_i - 1)
+    word = word.slice(0..index)
+  else
+    index = word.index(".")
+    index = (index.to_i - 1)
+    word = word.slice(0..index)
+  end
+
+
   # join the array and return the elements as a single string
   if word.class == String
     return word
@@ -52,9 +60,9 @@ end
 
 
 # Below test cases provided
-#puts domain_name("http://google.com")
-#puts domain_name("http://google.co.jp")
-#puts domain_name("www.xakep.ru")
-#puts domain_name("https://youtube.com")
+puts domain_name("http://google.com")
+puts domain_name("http://google.co.jp")
+puts domain_name("www.xakep.ru")
+puts domain_name("https://youtube.com")
 puts domain_name("http://www.codewars.com/kata/")
-#puts domain_name("icann.org")
+puts domain_name("icann.org")
