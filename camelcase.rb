@@ -7,11 +7,19 @@ For instance:
 'camel case word'.camelcase => CamelCaseWord
 =end
 
-
-rescue => exception
-
+def camelcase(item)
+  item.rstrip!
+  item.lstrip!
+  words = item.split(" ")
+  for word in words do
+    word.capitalize!
+  end
+  return words.join()
 end
 
-class String
-    #your cool code here...
-end
+
+
+camelcase("test case")
+camelcase("camel case method")
+camelcase("say hello")
+camelcase(" camel case method")
