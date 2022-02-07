@@ -9,13 +9,28 @@ domain_name("https://www.cnet.com") == "cnet"
 
 
 def domain_name(url)
-    puts url
+
+  entire_string = url.split("")
+
+  if entire_string.count(".") > 1
+    # do this
+    puts "more than one!"
+  elsif entire_string.count(".") == 1
+    # find index of the dot and delete everything in the array from there to end
+    puts " Just one!"
+    dot_index = entire_string.index(".")
+    entire_string = entire_string.slice(0, dot_index).join()
+    puts entire_string
+  else
+  end
+
+
 end
 
 
 
 # Below test cases provided
 domain_name("http://google.com")
-domain_name("http://google.co.jp")
-domain_name("www.xakep.ru")
-domain_name("https://youtube.com")
+#domain_name("http://google.co.jp")
+#domain_name("www.xakep.ru")
+#domain_name("https://youtube.com")
