@@ -9,7 +9,7 @@ domain_name("https://www.cnet.com") == "cnet"
 
 
 def domain_name(url)
-    # return just the domain name
+    puts url
 end
 
 
