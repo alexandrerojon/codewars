@@ -16,9 +16,16 @@ The second value in the first integer array is 0, since the bus is empty in the 
 
 def number(bus_stops)
   # Happy Coding
+  total_passengers = 0
+  for micro in bus_stops do
+    total_passengers += micro.first
+    total_passengers -= micro.last
+  end
+
+  return total_passengers
 end
 
 
-number([[10, 0], [3, 5], [5, 8]])
-number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]])
-number([[3, 0], [9, 1], [4, 8], [12, 2], [6, 1], [7, 8]])
+puts number([[10, 0], [3, 5], [5, 8]]) #5
+puts number([[3, 0], [9, 1], [4, 10], [12, 2], [6, 1], [7, 10]]) #17
+puts number([[3, 0], [9, 1], [4, 8], [12, 2], [6, 1], [7, 8]]) #21
