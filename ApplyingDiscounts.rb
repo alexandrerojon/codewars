@@ -14,9 +14,8 @@ There won't be any awkward decimal numbers, only 0.5 to deal with.
 
 def get_discounts(nums, d)
   discount = d.to_i
-  remainder = (100 - discount)
-  for item in nums do
-    sum = item * 0.remainder
+  for number in nums do
+    return (number * discount / 100)
   end
 end
 
