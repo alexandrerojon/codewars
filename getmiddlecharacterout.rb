@@ -11,3 +11,14 @@ A word (string) of length 0 < str < 1000 (In javascript you may get slightly mor
 #Output
 The middle character(s) of the word represented as a string.
 =end
+
+
+def get_middle(s)
+  #your code here
+end
+
+get_middle("test")
+get_middle("testing")
+get_middle("middle")
+get_middle("A")
+get_middle("of")
