@@ -14,7 +14,12 @@ The middle character(s) of the word represented as a string.
 
 
 def get_middle(s)
-  #your code here
+  if s.length.odd?
+    puts " it is odd"
+    return s.slice(s.length / 2)
+  else
+    puts " it is even"
+  end
 end
 
 get_middle("test")
