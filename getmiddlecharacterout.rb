@@ -14,16 +14,18 @@ The middle character(s) of the word represented as a string.
 
 
 def get_middle(s)
+  return s if s.length == 1
   if s.length.odd?
-    puts " it is odd"
-    return s.slice(s.length / 2)
+    index = (s.length)
+    return s.slice(index / 2)
   else
-    puts " it is even"
+    index = (s.length / 2)
+    return s.slice((index-1)..(index))
   end
 end
 
-get_middle("test")
-get_middle("testing")
-get_middle("middle")
-get_middle("A")
-get_middle("of")
+puts get_middle("test")
+puts get_middle("testing")
+puts get_middle("middle")
+puts get_middle("A")
+#puts get_middle("of")
