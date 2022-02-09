@@ -11,7 +11,7 @@ Note: for this kata y isn't considered a vowel.
 =end
 
 def disemvowel(str)
-  str
+  return str.gsub(/[aAeEiIoOuU]/, '')
 end
 
 disemvowel("This website is for losers LOL!")
