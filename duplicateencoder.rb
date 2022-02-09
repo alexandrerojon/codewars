@@ -10,11 +10,22 @@ Assertion messages may be unclear about what they display in some languages. If 
 =end
 
 def duplicate_encode(word)
-  #your code here
+
+  split_word = word.split("")
+  split_word.map! { |character|
+    if word.include?(character)
+      character = ")"
+
+    else
+      character = "("
+    end
+  }
+  puts split_word.join("")
+
 end
 
 
-duplicate_encode("din") #(((
-duplicate_encode("recede") #()()()
-duplicate_encode("Success") #)())())
-duplicate_encode("(( @") #"))((
+puts duplicate_encode("din") #(((
+puts duplicate_encode("recede") #()()()
+puts duplicate_encode("Success") #)())())
+puts duplicate_encode("(( @") #"))((
