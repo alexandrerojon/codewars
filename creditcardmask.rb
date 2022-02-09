@@ -16,7 +16,12 @@ maskify('Nananananananananananananananana Batman!') # should return '###########
 
 
 def maskify(cc)
-  # your beautiful code goes here
+  return cc if cc.length <= 4
+  puts ("----")
+  ending = cc.slice!(-4..-1)
+  rest = cc.split("")
+  hidden = rest.map {|item| item = "#" }
+  return hidden.join("") + ending
 end
 
 
