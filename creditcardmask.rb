@@ -21,3 +21,5 @@ end
 
 
 maskify('4556364607935616')
+maskify('1')
+maskify('11111')
