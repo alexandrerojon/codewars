@@ -10,18 +10,16 @@ Assertion messages may be unclear about what they display in some languages. If 
 =end
 
 def duplicate_encode(word)
-
   split_word = word.split("")
   split_word.map! { |character|
-    if word.include?(character)
+    character.downcase!
+    if word.count(character) > 1
       character = ")"
-
     else
       character = "("
     end
   }
-  puts split_word.join("")
-
+  return split_word.join("")
 end
 
 
@@ -29,3 +27,4 @@ puts duplicate_encode("din") #(((
 puts duplicate_encode("recede") #()()()
 puts duplicate_encode("Success") #)())())
 puts duplicate_encode("(( @") #"))((
+puts duplicate_encode('Supralapsarian') #(()))())())()(
