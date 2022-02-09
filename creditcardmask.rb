@@ -17,14 +17,18 @@ maskify('Nananananananananananananananana Batman!') # should return '###########
 
 def maskify(cc)
   return cc if cc.length <= 4
-  puts ("----")
-  ending = cc.slice!(-4..-1)
+  ending = cc[-4..-1]
   rest = cc.split("")
   hidden = rest.map {|item| item = "#" }
-  return hidden.join("") + ending
+  desired_length = (cc.length - 5)
+  hidden = hidden[0..desired_length]
+  done = hidden.join("").to_s
+  return done + ending
 end
 
 
 maskify('4556364607935616')
 maskify('1')
 maskify('11111')
+puts maskify('12668824424981190606592')
+puts maskify('7437829751469')
