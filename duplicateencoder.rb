@@ -14,4 +14,7 @@ def duplicate_encode(word)
 end
 
 
-duplicate_encode("din")
+duplicate_encode("din") #(((
+duplicate_encode("recede") #()()()
+duplicate_encode("Success") #)())())
+duplicate_encode("(( @") #"))((
