@@ -1,3 +1,4 @@
 # codewars challenges 👻 
 
-You can see me code some challenges from Codewars, with the test below to run them if you'd like. :) 💻
+Hey there!
+Here you will find some coding challenge, in Ruby ad Python that I do daily. They all come with the instructions commented out at the top and test cases that you can directly run in your IDE. :) 💻
