@@ -14,22 +14,26 @@ Example
 
 
 def duplicate_count(text)
+  puts text
   return 0 if text.length <= 1
   letters = text.split("")
+  puts letters.join("")
   count = 0
-  for letter in letters do
-    letter.downcase!
-   if letters.count(letter) > 1
-    count += 1
-    letters.delete(letter)
-   end
+  for item in letters do
+    puts "12".is_integer?
+
+    if letters.count(item) > 1
+      count += 1
+      letters.delete(item)
+    end
   end
   return count
 end
 
 
-puts duplicate_count("")
-puts duplicate_count("abcde")
-puts duplicate_count("abcdeaa")
-puts duplicate_count("abcdeaB")
-puts duplicate_count("Indivisibilities")
+# puts duplicate_count("")
+# puts duplicate_count("abcde")
+# puts duplicate_count("abcdeaa")
+# puts duplicate_count("abcdeaB")
+# puts duplicate_count("Indivisibilities")
+puts duplicate_count("foswgJOLN9rhs9F3nNsZk6lwvcFuVuR6WGtwOp0rGka7tk7usOS0hInFgdRFGIWrTWHrMg4auk6oZoyRHO2SNj5J")
