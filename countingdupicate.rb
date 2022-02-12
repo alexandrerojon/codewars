@@ -17,3 +17,10 @@ def duplicate_count(text)
   #your code here
 
 end
+
+
+duplicate_count("")
+duplicate_count("abcde")
+duplicate_count("abcdeaa")
+duplicate_count("abcdeaB")
+duplicate_count("Indivisibilities")
