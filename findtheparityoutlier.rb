@@ -11,6 +11,7 @@ Should return: 160 (the only even number)
 =end
 
 def find_outlier(integers)
+  puts integers
 end
 
 find_outlier([0, 1, 2])
