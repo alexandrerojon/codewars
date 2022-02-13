@@ -12,11 +12,7 @@ Examples
 [1,2,2,3,3,3,4,3,3,3,2,2,1] should return 4, because it appears 1 time (which is odd).
 =end
 
-def find_it(seq)
-  for number in seq do
-    return number if seq.count(number).odd?
-  end
-end
+
 
 
 puts find_it([20,1,-1,2,-2,3,3,5,5,1,2,4,20,4,-1,-2,5])
