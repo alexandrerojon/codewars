@@ -13,10 +13,15 @@ Example
 =end
 
 def delete_nth(order,max_e)
-  #your code here
+  order.map.with_index {|item, index|
+    if order.count(item) > max_e
+      order.delete_at(index)
+    end
+  }
+  return order
 end
 
 
 
-delete_nth([20,37,20,21], 1) #[20,37,21]
-delete_nth([1,1,3,3,7,2,2,2,2], 3) #[1, 1, 3, 3, 7, 2, 2, 2]
+puts delete_nth([20,37,20,21], 1) #[20,37,21]
+#delete_nth([1,1,3,3,7,2,2,2,2], 3) #[1, 1, 3, 3, 7, 2, 2, 2]
