@@ -9,18 +9,16 @@ weirdcase( "Weird string case" );#=> returns "WeIrD StRiNg CaSe"
 =end
 
 def weirdcase string
-  string = string.split("")
-  for item in string do
-     # statement to catch spaces and pass them
-    next if item == " "
-    item.upcase! if string.index(item).even?
+  words = string.split(" ")
+  for word in words do
+    letters = word.split("")
+    letters.each_with_index do |letter, index|
+      letter.upcase! if index.even?
+    end
   end
-  string = string.join("")
-  return string
-
 end
 
 
-weirdcase('This')
-weirdcase('is')
+#weirdcase('This')
+#weirdcase('is')
 weirdcase('This is a test')
