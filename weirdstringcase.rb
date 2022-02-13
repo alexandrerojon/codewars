@@ -10,15 +10,18 @@ weirdcase( "Weird string case" );#=> returns "WeIrD StRiNg CaSe"
 
 def weirdcase string
   words = string.split(" ")
-  for word in words do
+  translated_words = []
+  words.each do |word|
     letters = word.split("")
     letters.each_with_index do |letter, index|
       letter.upcase! if index.even?
     end
+    translated_words << letters.join()
   end
+  return translated_words.join(" ")
 end
 
 
-#weirdcase('This')
-#weirdcase('is')
-weirdcase('This is a test')
+puts weirdcase('This')
+puts weirdcase('is')
+puts weirdcase('This is a test')
