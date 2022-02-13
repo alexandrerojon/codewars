@@ -21,7 +21,6 @@ def weirdcase string
   return translated_words.join(" ")
 end
 
-
 puts weirdcase('This')
 puts weirdcase('is')
 puts weirdcase('This is a test')
