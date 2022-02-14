@@ -8,3 +8,11 @@ solution('abc') # should return ['ab', 'c_']
 solution('abcdef') # should return ['ab', 'cd', 'ef']
 
 =end
+
+def solution(str)
+
+end
+
+solution("abcdef") #["ab", "cd", "ef"]
+solution("abcdefg") #["ab", "cd", "ef", "g_"]
+solution("") #[]
