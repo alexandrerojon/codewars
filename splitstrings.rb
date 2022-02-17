@@ -11,10 +11,9 @@ solution('abcdef') # should return ['ab', 'cd', 'ef']
 
 def solution(str)
 
-
-
 end
 
 solution("abcdef") #["ab", "cd", "ef"]
 solution("abcdefg") #["ab", "cd", "ef", "g_"]
 solution("") #[]
+solution("abracadabra")
