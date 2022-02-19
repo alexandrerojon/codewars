@@ -12,17 +12,15 @@ Example
 
 def solution(string)
   entire_word = string.split("")
-  entire_word.each_with_index do |item, index|
-    # puts item
-    # puts index
+  entire_word.map! { |item|
     if item.match?(/[A-Z]/)
       item = " " + item
-      puts item
+    else
+      item = item
     end
-  end
-  puts entire_word.join()
-
+  }
+  return entire_word.join()
 end
 
-solution('camelCasing') #'camel Casing
-# solution('camelCasingTest') #'camel Casing Test'
+puts solution('camelCasing') #'camel Casing
+puts solution('camelCasingTest') #'camel Casing Test'
