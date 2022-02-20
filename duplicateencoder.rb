@@ -28,3 +28,4 @@ puts duplicate_encode("recede") #()()()
 puts duplicate_encode("Success") #)())())
 puts duplicate_encode("(( @") #"))((
 puts duplicate_encode('Supralapsarian') #(()))())())()(
+puts duplicate_encode('TestCasing')
