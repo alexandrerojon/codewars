@@ -14,8 +14,12 @@ Examples:
 
 
 def validPhoneNumber(phoneNumber)
-  #TODO
+  all_items = phoneNumber.split("")
+  return false if all_items.length != 14
+  return false if all_items[0] != "(" || all_items[4] != ")"
+  return true
 end
 
 
-validPhoneNumber("(123) 456-7890")
+puts validPhoneNumber("(123) 456-7890")
+puts validPhoneNumber("(123) 456-70")
