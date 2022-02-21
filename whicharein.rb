@@ -22,11 +22,20 @@ Beware: r must be without duplicates.
 =end
 
 def in_array(array1, array2)
-  ...
+  array3 = []
+  for a2word in array2 do
+    for a1word in array1 do
+      if a2word.include?(a1word)
+        array3 << a1word
+      end
+    end
+  end
+  array3 = array3.uniq
+  return array3.sort!
 end
 
 a1 = ["arp", "live", "strong"]
 a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
-in_array(a1, a2) #["arp", "live", "strong"]
+puts in_array(a1, a2) #["arp", "live", "strong"]
 a1 = ["tarp", "mice", "bull"]
 in_array(a1, a2) #[]
