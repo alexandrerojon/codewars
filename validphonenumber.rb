@@ -16,10 +16,13 @@ Examples:
 def validPhoneNumber(phoneNumber)
   all_items = phoneNumber.split("")
   return false if all_items.length != 14
-  return false if all_items[0] != "(" || all_items[4] != ")"
+  return false if all_items[0] != "(" || all_items[4] != ")" || all_items[9] != "-"
+  all_numbers = all_items.select! {|item| item.match?(/[\d]/)}
+  return false if all_numbers.length != 10
   return true
 end
 
 
 puts validPhoneNumber("(123) 456-7890")
 puts validPhoneNumber("(123) 456-70")
+puts validPhoneNumber("(123) 456 7890")
