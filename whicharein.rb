@@ -27,3 +27,6 @@ end
 
 a1 = ["arp", "live", "strong"]
 a2 = ["lively", "alive", "harp", "sharp", "armstrong"]
+in_array(a1, a2) #["arp", "live", "strong"]
+a1 = ["tarp", "mice", "bull"]
+in_array(a1, a2) #[]
