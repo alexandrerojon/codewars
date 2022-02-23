@@ -18,9 +18,7 @@ def title_case(title, minor_words = '')
   full_sentence = title.split(" ")
   for word in full_sentence do
     word.downcase!
-    if !lowercase_words.include?(word)
-      word.capitalize!
-    end
+    word.capitalize! if !lowercase_words.include?(word)
   end
   full_sentence[0].capitalize!
   return full_sentence.join(" ")
