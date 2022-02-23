@@ -15,7 +15,6 @@ title_case('the quick brown fox') # should return: 'The Quick Bro
 def title_case(title, minor_words = '')
   return title if title.length == 0
   lowercase_words = minor_words.split(" ").map {|word| word.downcase }
-  #puts lowercase_words.join(" ")
   full_sentence = title.split(" ")
   for word in full_sentence do
     word.downcase!
@@ -23,11 +22,8 @@ def title_case(title, minor_words = '')
       word.capitalize!
     end
   end
-
   full_sentence[0].capitalize!
   return full_sentence.join(" ")
-
-
 end
 
 
