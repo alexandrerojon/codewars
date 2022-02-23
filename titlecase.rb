@@ -13,11 +13,25 @@ title_case('the quick brown fox') # should return: 'The Quick Bro
 
 =end
 def title_case(title, minor_words = '')
+  return title if title.length == 0
+  lowercase_words = minor_words.split(" ").map {|word| word.downcase }
+  #puts lowercase_words.join(" ")
+  full_sentence = title.split(" ")
+  for word in full_sentence do
+    word.downcase!
+    if !lowercase_words.include?(word)
+      word.capitalize!
+    end
+  end
+
+  full_sentence[0].capitalize!
+  return full_sentence.join(" ")
+
 
 end
 
 
-title_case('') #''
-title_case('a clash of KINGS', 'a an the of') #'A Clash of Kings'
-title_case('THE WIND IN THE WILLOWS', 'The In') #'The Wind in the Willows'
-title_case('the quick brown fox') #'The Quick Brown Fox'
+puts title_case('') #''
+puts title_case('a clash of KINGS', 'a an the of') #'A Clash of Kings'
+puts title_case('THE WIND IN THE WILLOWS', 'The In') #'The Wind in the Willows'
+puts title_case('the quick brown fox') #'The Quick Brown Fox'
