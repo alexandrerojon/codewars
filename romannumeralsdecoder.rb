@@ -20,3 +20,27 @@ C          100
 D          500
 M          1,000
 =end
+def solution(roman)
+  numerals = {
+    "I" => 1,
+    "V" => 5,
+    "X" => 10,
+    "L" => 50,
+    "C" => 100,
+    "D" => 500,
+    "M" => 1.000
+  }
+  total = 0
+  numbers = roman.split("")
+  for i in numbers do
+    total += numerals[i]
+  end
+  return total.to_i
+end
+
+
+solution('XXI') #21
+solution('I') #1
+solution('IV') #4
+solution('MMVIII') #2008
+solution('MDCLXVI') #1666
