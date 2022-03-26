@@ -21,6 +21,7 @@ D          500
 M          1,000
 =end
 def solution(roman)
+  # Hash translation
   numerals = {
     "I" => 1,
     "V" => 5,
