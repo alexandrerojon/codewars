@@ -21,4 +21,9 @@ def palindrome(num)
 end
 
 
-palindrome(5), false
+palindrome(5) #false
+palindrome(1212) #true
+palindrome(1331) #true
+palindrome(194) #false
+palindrome(3357665) #true
+palindrome("357665") #'Not valid'
