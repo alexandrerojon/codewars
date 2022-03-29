@@ -17,13 +17,18 @@
 # -42      =>  "Not valid"
 
 def palindrome(num)
-  #you cool code here...
+  return false if num.class != Integer
+  input_array = num.to_s.split('')
+  input_length = input_array.length()
+  first_part = input_array.slice!(0..((input_length/2) - 1))
+  puts first_part
+  puts input_array
 end
 
 
 palindrome(5) #false
 palindrome(1212) #true
-palindrome(1331) #true
-palindrome(194) #false
-palindrome(3357665) #true
-palindrome("357665") #'Not valid'
+# palindrome(1331) #true
+# palindrome(194) #false
+# palindrome(3357665) #true
+# palindrome("357665") #'Not valid'
