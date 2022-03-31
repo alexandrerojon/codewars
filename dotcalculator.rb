@@ -47,7 +47,6 @@ def dot_calculator equation
   return dots.join("")
 end
 
-
 puts dot_calculator("..... + ...............")
 puts dot_calculator("..... - ...")
 puts dot_calculator("..... - .")
