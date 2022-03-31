@@ -22,16 +22,29 @@
 
 
 def dot_calculator equation
-  "..."
+  items = equation.split(" ")
+  dots = ""
+  first_amount = items.first.size
+  second_amount = items.last.size
+  case items[1]
+  when "+"
+    return first_amount + second_amount
+  when "-"
+    return first_amount - second_amount
+  when "*"
+    return first_amount * second_amount
+  when "//"
+    return first_amount / second_amount
+  end
 end
 
 
-dot_calculator("..... + ...............")
-dot_calculator("..... - ...")
-dot_calculator("..... - .")
-dot_calculator("..... * ...")
-dot_calculator("..... * ..")
-dot_calculator("..... // ..")
-dot_calculator("..... // .")
-dot_calculator(". // ..")
-dot_calculator(". - .")
+puts dot_calculator("..... + ...............")
+puts dot_calculator("..... - ...")
+puts dot_calculator("..... - .")
+puts dot_calculator("..... * ...")
+puts dot_calculator("..... * ..")
+puts dot_calculator("..... // ..")
+puts dot_calculator("..... // .")
+puts dot_calculator(". // ..")
+puts dot_calculator(". - .")
