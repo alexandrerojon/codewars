@@ -19,3 +19,15 @@
 # * "..... // ."              => "....."
 # * ". // .."                 => ""
 # * ".. - .."                 => ""
+
+
+def dot_calculator equation
+  "..."
+end
+
+
+dot_calculator("..... + ...............")
+dot_calculator("..... - ...")
+dot_calculator("..... - .")
+dot_calculator("..... * ...")
+dot_calculator("..... * ..")
