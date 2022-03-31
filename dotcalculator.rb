@@ -23,19 +23,28 @@
 
 def dot_calculator equation
   items = equation.split(" ")
-  dots = ""
+  dots = []
   first_amount = items.first.size
   second_amount = items.last.size
   case items[1]
   when "+"
-    return first_amount + second_amount
+    amount_of_dots = first_amount + second_amount
+    amount_of_dots.times do dots << "."
+    end
   when "-"
-    return first_amount - second_amount
+    amount_of_dots = first_amount - second_amount
+    amount_of_dots.times do dots << "."
+    end
   when "*"
-    return first_amount * second_amount
+    amount_of_dots = first_amount * second_amount
+    amount_of_dots.times do dots << "."
+    end
   when "//"
-    return first_amount / second_amount
+    amount_of_dots = first_amount / second_amount
+    amount_of_dots.times do dots << "."
+    end
   end
+  return dots.join("")
 end
 
 
