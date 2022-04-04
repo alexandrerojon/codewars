@@ -9,12 +9,12 @@
 def two_sum(numbers, target)
   numbers.each_with_index do |item, index|
     for number in numbers do
-      return index, numbers.index(number) if item + number == target
+      return index, numbers.rindex(number) if item + number == target
     end
   end
 end
 
 
-#puts two_sum([1, 2, 3], 4) # 0, 2
-#two_sum([1234, 5678, 9012], 14690) # 1, 2
+puts two_sum([1, 2, 3], 4) # 0, 2
+puts two_sum([1234, 5678, 9012], 14690) # 1, 2
 puts two_sum([2, 2, 3], 4) # 0, 1
