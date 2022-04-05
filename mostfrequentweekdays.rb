@@ -20,7 +20,8 @@ require 'date'
 
 
 def most_frequent_days(year)
-  #your code here
+  formatted_date = Date.new(year)
+  day_in_the_year = 0
   days_hash = {
     :monday => 0,
     :tuesday => 0,
@@ -30,13 +31,11 @@ def most_frequent_days(year)
     :saturday => 0,
     :sunday => 0
   }
-  day_in_the_year = 0
   while day_in_the_year < 365 do
-    puts "Hello"
     day_in_the_year += 1
     puts day_in_the_year
+    puts formatted_date.day
   end
-  formatted_date = Date.new(year)
   # puts formatted_date.day
   # puts days_hash[:monday] += 1
 end
