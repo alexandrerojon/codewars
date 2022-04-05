@@ -33,6 +33,7 @@ def most_frequent_days(year)
   }
   while current_day_in_the_year < 365 do
     current_day_in_the_year += 1
+    # puts formatted_date.sunday?
     if formatted_date.monday?
       days_hash[:monday] += 1
     elsif formatted_date.tuesday?
@@ -51,19 +52,21 @@ def most_frequent_days(year)
     formatted_date += 1
 
   end
-  puts days_hash[:monday]
-  puts days_hash[:tuesday]
-  puts days_hash[:tuesday]
-  puts days_hash[:wednesday]
-  puts days_hash[:thursday]
-  puts days_hash[:friday]
-  puts days_hash[:saturday]
-  puts days_hash[:sunday]
+  # puts days_hash[:monday]
+  # puts days_hash[:tuesday]
+  # puts days_hash[:tuesday]
+  # puts days_hash[:wednesday]
+  # puts days_hash[:thursday]
+  # puts days_hash[:friday]
+  # puts days_hash[:saturday]
+  # puts days_hash[:sunday]
 
-
-  # puts formatted_date.day
-  # puts days_hash[:monday] += 1
+  # puts "---"
+  final = days_hash.sort_by {|day, amount| amount}.reverse!.first
+  final.pop
+  final = final.first.capitalize
+  return final
 end
 
 
-most_frequent_days(2022)
+puts most_frequent_days(2025)
