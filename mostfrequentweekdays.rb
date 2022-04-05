@@ -15,3 +15,31 @@
 # * 2427 -> ['Friday']
 # * 2185 -> ['Saturday']
 # * 2860 -> ['Thursday', 'Friday']
+
+require 'date'
+
+
+def most_frequent_days(year)
+  #your code here
+  days_hash = {
+    :monday => 0,
+    :tuesday => 0,
+    :wednesday => 0,
+    :thursday => 0,
+    :friday => 0,
+    :saturday => 0,
+    :sunday => 0
+  }
+  day_in_the_year = 0
+  while day_in_the_year < 365 do
+    puts "Hello"
+    day_in_the_year += 1
+    puts day_in_the_year
+  end
+  formatted_date = Date.new(year)
+  # puts formatted_date.day
+  # puts days_hash[:monday] += 1
+end
+
+
+most_frequent_days(2022)
