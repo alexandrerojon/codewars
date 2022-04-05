@@ -64,7 +64,8 @@ def most_frequent_days(year)
   # puts "---"
   final = days_hash.sort_by {|day, amount| amount}.reverse!.first
   final.pop
-  final = final.first.capitalize
+  final = final.first.capitalize.to_s
+  # need to then store the final into an array and then return that
   return final
 end
 
