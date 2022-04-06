@@ -19,6 +19,8 @@
 require 'date'
 
 def most_frequent_days(year)
+
+  #all of the global variables I require throughout the challenge
   formatted_date = Date.new(year)
   most_days = []
   days_hash = {
@@ -30,6 +32,8 @@ def most_frequent_days(year)
     :saturday => 0,
     :sunday => 0
   }
+
+  # Loop through each day of the year using Ruby built in date class & break statement when year changes
   while formatted_date.day < 365 do
     break if formatted_date.year != year
     if formatted_date.monday?
@@ -49,26 +53,14 @@ def most_frequent_days(year)
     end
     puts formatted_date.day
     formatted_date += 1
-
   end
-  # puts days_hash[:monday]
-  # puts days_hash[:tuesday]
-  # puts days_hash[:tuesday]
-  # puts days_hash[:wednesday]
-  # puts days_hash[:thursday]
-  # puts days_hash[:friday]
-  # puts days_hash[:saturday]
-  # puts days_hash[:sunday]
 
+  # Iterate through each pairing in days hash to find the highest values and store them in array
   days_hash.each do |key, value|
     most_days << key.to_s.capitalize if value >= 53
   end
-  puts days_hash
 
-  # final = days_hash.sort_by {|day, amount| amount}.reverse!.first
-  # final.pop
-  # final = final.first.capitalize.to_s
-  # need to then store the final into an array and then return that
+  # array that has the highest days to be returned
   return most_days
 end
 
