@@ -18,10 +18,9 @@
 
 require 'date'
 
-
 def most_frequent_days(year)
   formatted_date = Date.new(year)
-  current_day_in_the_year = 0
+  most_days = []
   days_hash = {
     :monday => 0,
     :tuesday => 0,
@@ -31,9 +30,8 @@ def most_frequent_days(year)
     :saturday => 0,
     :sunday => 0
   }
-  while current_day_in_the_year < 365 do
-    current_day_in_the_year += 1
-    # puts formatted_date.sunday?
+  while formatted_date.day < 365 do
+    break if formatted_date.year != year
     if formatted_date.monday?
       days_hash[:monday] += 1
     elsif formatted_date.tuesday?
@@ -49,6 +47,7 @@ def most_frequent_days(year)
     elsif formatted_date.sunday?
       days_hash[:sunday] += 1
     end
+    puts formatted_date.day
     formatted_date += 1
 
   end
@@ -61,13 +60,17 @@ def most_frequent_days(year)
   # puts days_hash[:saturday]
   # puts days_hash[:sunday]
 
-  # puts "---"
-  final = days_hash.sort_by {|day, amount| amount}.reverse!.first
-  final.pop
-  final = final.first.capitalize.to_s
+  days_hash.each do |key, value|
+    most_days << key.to_s.capitalize if value >= 53
+  end
+  puts days_hash
+
+  # final = days_hash.sort_by {|day, amount| amount}.reverse!.first
+  # final.pop
+  # final = final.first.capitalize.to_s
   # need to then store the final into an array and then return that
-  return final
+  return most_days
 end
 
 
-puts most_frequent_days(2025)
+puts most_frequent_days(2016)
