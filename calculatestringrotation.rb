@@ -13,6 +13,12 @@
 
 
 def shifted_diff(first, second)
+  # Global variables for entire code
+  rotations = 0
+  target_word = second
+  current_word = first
+  while
+
   return -1
 end
 
