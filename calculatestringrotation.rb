@@ -15,3 +15,8 @@
 def shifted_diff(first, second)
   return -1
 end
+
+
+shifted_diff("eecoff","coffee") # 4
+shifted_diff("Moose","moose"), # -1
+shifted_diff("isn't","'tisn") # 2
