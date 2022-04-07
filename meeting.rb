@@ -13,15 +13,24 @@
 # It can happen that in two distinct families with the same family name two people have the same first name too.
 
 def meeting(s)
-  # your code
+  # Gloabl variables needed
   given_names = s.split(';')
   all_names = []
+
+  # Iteration through each first and last name pairing
   for name in given_names do
     name.upcase!
-    name = name.gsub(/\W/, ', ')
-    all_names << name
+    name = name.gsub(/\W/, ' ')
+    reversed_name = name.split(' ').reverse!
+    reversed_name[0].ljust(10, ' ')
+    reversed_name[0].insert(0, '(')
+    reversed_name[1].insert(-1, ')')
+    all_names << reversed_name.join(', ')
   end
-  return all_names
+
+  # Sort the final array and return it
+  all_names.sort!
+  return all_names.join('')
 end
 
 
