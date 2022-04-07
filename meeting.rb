@@ -14,6 +14,13 @@
 
 def meeting(s)
   # your code
+  given_names = s.split(';')
+  all_names = []
+  for name in given_names do
+    name.upcase!
+    all_names << name
+  end
+  puts all_names.class
 end
 
 
