@@ -18,9 +18,10 @@ def meeting(s)
   all_names = []
   for name in given_names do
     name.upcase!
+    name = name.gsub(/\W/, ', ')
     all_names << name
   end
-  puts all_names.class
+  return all_names
 end
 
 
