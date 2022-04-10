@@ -21,3 +21,7 @@ def how_many_gifts(max_budget, gifts)
   end
   return amount_of_gifts
 end
+
+
+how_many_gifts(20, [13, 2, 4, 6, 1]) # 4
+how_many_gifts(0, [1]) # 0
