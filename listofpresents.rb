@@ -10,18 +10,24 @@
 # _ NOTE: All numbers will be integers >= 0, and the array will never be empty. _
 
 def how_many_gifts(max_budget, gifts)
-  # your code goes here
+  # Global variables needed throughout the code
+  purse = 0
+  purse += max_budget
   amount_of_gifts = 0
-  purse = max_budget
+
+  # Iteration to go through each present, and deduct until can no longer purchase gifts
   for gift in gifts do
     if purse >= gift
       purse -= gift
       amount_of_gifts += 1
+    else
+      return amount_of_gifts
     end
   end
   return amount_of_gifts
 end
 
 
-how_many_gifts(20, [13, 2, 4, 6, 1]) # 4
-how_many_gifts(0, [1]) # 0
+puts how_many_gifts(20, [13, 2, 4, 6, 1]) # 4
+puts how_many_gifts(0, [1]) # 0
+puts how_many_gifts(90, [87, 3, 5, 25, 1, 3, 4, 6, 20])
