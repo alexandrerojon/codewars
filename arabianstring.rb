@@ -10,17 +10,25 @@
 
 
 def camelize(str)
-  # have to be careful for seperators
-  words = str.split(/[^a-zA-Z0-9 ']/)
-  puts words
+  # split the string and seperate by any non-letters and store in array
+  words = str.split(/[\s\W'_']/)
+
+  # iterate through each item in that array to clean it
+  words.each{|word|
+    words.delete(word) if word.empty?
+    word.strip
+    word.downcase!
+    word.capitalize!
+  }
+  return words.join()
 
 end
 
 
-camelize("john doe") #"JohnDoe"
-camelize("frank peas") #"FrankPeas"
-camelize("Rugby:Club:2013") #"RugbyClub2013"
-camelize("Arabian_String-Test") #"ArabianStringTest"
-camelize("Ninja-Test--01") #"NinjaTest01"
-camelize("'quOted' => 'What'") #"QuotedWhat"
-camelize("dir/for/data") #"DirForData"
+# puts camelize("john doe") #"JohnDoe"
+# puts camelize("frank peas") #"FrankPeas"
+# puts camelize("Rugby:Club:2013") #"RugbyClub2013"
+# puts camelize("Arabian_String-Test") #"ArabianStringTest"
+# puts camelize("Ninja-Test--01") #"NinjaTest01"
+puts camelize("'quOted' => 'What'") #"QuotedWhat"
+# puts camelize("dir/for/data") #"DirForData"
