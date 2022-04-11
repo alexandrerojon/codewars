@@ -10,10 +10,10 @@
 
 
 def camelize(str)
-  cleaned_string = str.gsub(/[\W]/,' ')
+  # remove any non-letter, or non-character from the given string
+  cleaned_string = str.gsub(/[\W'_']/,' ')
 
-
-  # split the string and seperate by any non-letters and store in array
+  # split the string and seperate by a space
   words = cleaned_string.split(' ')
 
   # iterate through each item in that array to clean it
@@ -23,15 +23,16 @@ def camelize(str)
     word.downcase!
     word.capitalize!
   }
-  return words.join()
 
+  # return array using join to remove all spaces
+  return words.join()
 end
 
 
-puts camelize("john doe") #"JohnDoe"
-puts camelize("frank peas") #"FrankPeas"
-puts camelize("Rugby:Club:2013") #"RugbyClub2013"
-puts camelize("Arabian_String-Test") #"ArabianStringTest"
-puts camelize("Ninja-Test--01") #"NinjaTest01"
-puts camelize("'quOted' => 'What'") #"QuotedWhat"
-puts camelize("dir/for/data") #"DirForData"
+camelize("john doe") #"JohnDoe"
+camelize("frank peas") #"FrankPeas"
+camelize("Rugby:Club:2013") #"RugbyClub2013"
+camelize("Arabian_String-Test") #"ArabianStringTest"
+camelize("Ninja-Test--01") #"NinjaTest01"
+camelize("'quOted' => 'What'") #"QuotedWhat"
+camelize("dir/for/data") #"DirForData"
