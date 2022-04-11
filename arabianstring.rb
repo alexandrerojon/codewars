@@ -10,8 +10,11 @@
 
 
 def camelize(str)
+  cleaned_string = str.gsub(/[\W]/,' ')
+
+
   # split the string and seperate by any non-letters and store in array
-  words = str.split(/[\s\W'_']/)
+  words = cleaned_string.split(' ')
 
   # iterate through each item in that array to clean it
   words.each{|word|
@@ -25,10 +28,10 @@ def camelize(str)
 end
 
 
-# puts camelize("john doe") #"JohnDoe"
-# puts camelize("frank peas") #"FrankPeas"
-# puts camelize("Rugby:Club:2013") #"RugbyClub2013"
-# puts camelize("Arabian_String-Test") #"ArabianStringTest"
-# puts camelize("Ninja-Test--01") #"NinjaTest01"
+puts camelize("john doe") #"JohnDoe"
+puts camelize("frank peas") #"FrankPeas"
+puts camelize("Rugby:Club:2013") #"RugbyClub2013"
+puts camelize("Arabian_String-Test") #"ArabianStringTest"
+puts camelize("Ninja-Test--01") #"NinjaTest01"
 puts camelize("'quOted' => 'What'") #"QuotedWhat"
-# puts camelize("dir/for/data") #"DirForData"
+puts camelize("dir/for/data") #"DirForData"
