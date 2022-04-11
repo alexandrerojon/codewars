@@ -12,3 +12,12 @@
 def camelize(str)
   # ...
 end
+
+
+camelize("john doe") #"JohnDoe"
+camelize("frank peas") #"FrankPeas"
+camelize("Rugby:Club:2013") #"RugbyClub2013"
+camelize("Arabian_String-Test") #"ArabianStringTest"
+camelize("Ninja-Test--01") #"NinjaTest01"
+camelize("'quOted' => 'What'") #"QuotedWhat"
+camelize("dir/for/data") #"DirForData"
