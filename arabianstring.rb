@@ -10,7 +10,10 @@
 
 
 def camelize(str)
-  # ...
+  # have to be careful for seperators
+  words = str.split(/[^a-zA-Z0-9 ']/)
+  puts words
+
 end
 
 
