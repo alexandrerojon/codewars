@@ -24,7 +24,7 @@ def manhattan_distance(point_a, point_b)
 
 end
 
-
 manhattan_distance([1,1],[1,1]) # 0
 manhattan_distance([5,4],[3,2]) # 4
 manhattan_distance([1,1],[0,3]) # 3
+manhattan_distance puts output
