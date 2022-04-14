@@ -9,7 +9,6 @@
 
 # Complete the function that accepts two points and returns the Manhattan Distance
 # between the two points.
-
 # The points are arrays or tuples containing the x and y coordinate in the grid.
 # You can think of x as the row in the grid, and y as the column.
 
@@ -20,7 +19,6 @@
 
 def manhattan_distance(point_a, point_b)
   # your code here
-
 
 end
 
