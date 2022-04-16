@@ -1,4 +1,4 @@
-puts 'Welcome to my Good Vs. Evil battlefield simulator!' 
+puts 'Welcome to my Good Vs. Evil battlefield simulator!'
 
 def good_vs_evil(good, evil)
   # forces of good
@@ -14,7 +14,7 @@ def good_vs_evil(good, evil)
     "Eagles" => 4,
     "Wizards" => 10
   }
-  # forces of evil 
+  # forces of evil
   evil_forces = {
     "Orcs" => 1,
     "Men" => 2,
@@ -43,20 +43,16 @@ def good_vs_evil(good, evil)
 
   if good_tally > evil_tally
     return "Battle Result: Good triumphs over Evil"
-  
+
   elsif evil_tally > good_tally
     return "Battle Result: Evil eradicates all trace of Good"
   else
     return "Battle Result: No victor on this battle field"
   end
-  
-  
 end
-
 
 #Hobbits, Men, Elves, Dwarves, Eagles, Wizards.
 #Orcs, Men, Wargs, Goblins, Uruk Hai, Trolls, Wizards.
-
-puts good_vs_evil('1 0 0 0 0 0', '1 0 0 0 0 0 0')
-puts good_vs_evil('0 0 0 0 0 10', '0 1 1 1 1 0 0')
-puts good_vs_evil('0 0 0 0 0 10', '0 1 1 1 1 0 0')
+good_vs_evil('1 0 0 0 0 0', '1 0 0 0 0 0 0')
+good_vs_evil('0 0 0 0 0 10', '0 1 1 1 1 0 0')
+good_vs_evil('0 0 0 0 0 10', '0 1 1 1 1 0 0')
