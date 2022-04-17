@@ -43,7 +43,6 @@ def good_vs_evil(good, evil)
 
   if good_tally > evil_tally
     return "Battle Result: Good triumphs over Evil"
-
   elsif evil_tally > good_tally
     return "Battle Result: Evil eradicates all trace of Good"
   else
