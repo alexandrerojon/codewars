@@ -14,3 +14,7 @@
 def tankvol(h, d, vt)
   # your code
 end
+
+
+tankvol(5, 7, 3848) # 2940
+tankvol(2, 7, 3848) # 907
