@@ -13,6 +13,9 @@
 
 def tankvol(h, d, vt)
   # your code
+
+
+  # return truncated integer ( no float )
 end
 
 
