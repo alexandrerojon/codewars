@@ -29,13 +29,11 @@ def count_smileys(arr)
     return count
 end
 
-
 count_smileys([]) # 0
 count_smileys([":D",":~)",";~D",":)"]) # 4
 count_smileys([":)",":(",":D",":O",":;"]) # 2
 count_smileys([";]", ":[", ";*", ":$", ";-D"]) # 1
 count_smileys([";", ")", ";*", ":$", "8-D"]) # 0
-
 # Each smiley face must contain a valid pair of eyes. Eyes can be marked as : or ;
 # A smiley face can have a nose but it does not have to. Valid characters for a nose are - or ~
 # Every smiling face must have a smiling mouth that should be marked with either ) or D
