@@ -13,7 +13,6 @@
 # the total number of points scored by the team
 # the total number of points conceded by the team
 # and finally a kind of marks in our ranking system
-
 # a team marks 3 if it is a win
 # a team marks 1 if it is a draw
 # a team marks 0 if it is a loss.
@@ -42,4 +41,6 @@
 
 def nba_cup(result_sheet, to_find)
   # your code
+
+
 end
