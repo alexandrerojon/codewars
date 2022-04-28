@@ -26,13 +26,10 @@
 
 # The scores must be integers. If a score is a float number (abc.xyz...) you will return: "Error(float number):the concerned string"
 
-# Examples:
+# Examples / Test cases:
 # nba_cup(r, "Los Angeles Clippers") -> "Los Angeles Clippers:W=1;D=0;L=1;Scored=204;Conceded=208;Points=3"
-
 # nba_cup(r, "Boston Celtics") -> "Boston Celtics:W=1;D=0;L=0;Scored=120;Conceded=100;Points=3"
-
 # nba_cup(r, "") -> ""
-
 # nba_cup(r, "Boston Celt") -> "Boston Celt:This team didn't play!"
 
 # r0="New York Knicks 101.12 Atlanta Hawks 112"
