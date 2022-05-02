@@ -37,7 +37,5 @@
 
 
 def nba_cup(result_sheet, to_find)
-  # your code
-
-
+  # puts out response here
 end
