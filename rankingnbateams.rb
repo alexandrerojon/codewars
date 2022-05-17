@@ -38,4 +38,5 @@
 
 def nba_cup(result_sheet, to_find)
   # puts out response here
+  # puts out the results sheet to be compared
 end
