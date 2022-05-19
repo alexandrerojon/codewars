@@ -10,19 +10,29 @@
 #                                        #  9+3 = 12  -->  2
 
 def incrementer(nums)
+  # creation of global variables we will need later
   final_array = []
+  #iterate through each number from the array with their index
   nums.each_with_index do |number, index|
+    #reduce the index to single digit as per instruction
+    if index > 9
+      index = (index - 10)
+    end
+    #add to the number the amount of the current index
     number += (index + 1)
+    #reduce the number to single digit as per instruction
     if number > 9
       number = (number - 10)
     end
+    #push number into our global variable / array
     final_array << number
   end
+  #return the global variable which stored all our final numbers as an array
   return final_array
 end
 
 
-#incrementer([1,2,3])
+puts incrementer([1,2,3])
 puts incrementer([4,6,7,1,3])
-incrementer([3,6,9,8,9])
-# incrementer([1,2,3,4,5,6,7,8,9,9,9,9,9,8])
+puts incrementer([3,6,9,8,9])
+puts incrementer([1,2,3,4,5,6,7,8,9,9,9,9,9,8])
