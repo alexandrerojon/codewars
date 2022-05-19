@@ -24,5 +24,5 @@ end
 
 #incrementer([1,2,3])
 puts incrementer([4,6,7,1,3])
-# incrementer([3,6,9,8,9])
+incrementer([3,6,9,8,9])
 # incrementer([1,2,3,4,5,6,7,8,9,9,9,9,9,8])
