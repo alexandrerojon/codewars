@@ -17,9 +17,7 @@ def cakes(recipe, available)
     #Iteration through the ingredients needed per recipe
     recipe.each do |key, value|
         #statement returning false if we cannot find an ingredient required in the recipe in the available ingredients
-        if !available[key]
-            have_all_ingredients = false
-        end
+        have_all_ingredients = false if !available[key]
         #Push the amount of times possible we can create the current cake into local hash
         times_possible = available[key].to_i / value.to_i
         current_cake.store(key, times_possible)

@@ -1,5 +1,5 @@
 def count_smileys(arr)
-    count = 0
+  count = 0
     for s in arr do
         # variables that will change throughout tests
         is_valid_emoji = false
@@ -12,11 +12,11 @@ def count_smileys(arr)
 
         # check the length, and if greater than two than ensure correct nose
         if s.length == 3
-            nosecondition = true if s[1] == "-" || s[1] == "~"
+          nosecondition = true if s[1] == "-" || s[1] == "~"
         elsif s.length == 2
-            nosecondition = true
+          nosecondition = true
         else
-            nosecondition = false
+          nosecondition = false
         end
         # ensure valid smiley at end
         smilecondition = true if s[-1] == ")" || s[-1] == "D"
