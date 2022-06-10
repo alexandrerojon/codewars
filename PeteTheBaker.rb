@@ -14,7 +14,6 @@ def cakes(recipe, available)
     have_all_ingredients = true
     n_of_cakes_possible = 0
     current_cake = Hash.new
-
     #Iteration through the ingredients needed per recipe
     recipe.each do |key, value|
         #statement returning false if we cannot find an ingredient required in the recipe in the available ingredients
