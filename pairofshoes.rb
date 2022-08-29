@@ -20,10 +20,10 @@ def pair_of_shoes(shoes)
   puts shoes
 end
 
-
-pair_of_shoes([[0,21],[1,23],[1,21],[0,23]])
-pair_of_shoes([[0,21],[1,23],[1,21],[1,23]])
-pair_of_shoes([[0,23],[1,21],[1,23],[0,21],[1,22],[0,22]])
-pair_of_shoes([[0,23],[1,21],[1,23],[0,21]])
-pair_of_shoes([[0,23],[1,21],[1,22],[0,21]])
-pair_of_shoes([[0,23]])
+# Test cases below
+pair_of_shoes([[0,21],[1,23],[1,21],[0,23]]) #true
+pair_of_shoes([[0,21],[1,23],[1,21],[1,23]]) #false
+pair_of_shoes([[0,23],[1,21],[1,23],[0,21],[1,22],[0,22]]) #true
+pair_of_shoes([[0,23],[1,21],[1,23],[0,21]]) #true
+pair_of_shoes([[0,23],[1,21],[1,22],[0,21]]) #false
+pair_of_shoes([[0,23]]) #false
