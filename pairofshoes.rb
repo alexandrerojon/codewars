@@ -17,13 +17,26 @@
 # the output should be false.
 
 def pair_of_shoes(shoes)
-  puts shoes
+  # Combine all the arrays into a single larger one
+  combined_shoes = shoes.concat()
+
+  # Iterate through each item in the combined darray
+  combined_shoes.each { |shoe|
+    return false if combined_shoes.count(shoe).odd?
+  }
+
+  return true
+
+
+
+
+
 end
 
 # Test cases below
-pair_of_shoes([[0,21],[1,23],[1,21],[0,23]]) #true
-pair_of_shoes([[0,21],[1,23],[1,21],[1,23]]) #false
-pair_of_shoes([[0,23],[1,21],[1,23],[0,21],[1,22],[0,22]]) #true
-pair_of_shoes([[0,23],[1,21],[1,23],[0,21]]) #true
-pair_of_shoes([[0,23],[1,21],[1,22],[0,21]]) #false
-pair_of_shoes([[0,23]]) #false
+puts pair_of_shoes([[0,21],[1,23],[1,21],[0,23]]) #true
+# pair_of_shoes([[0,21],[1,23],[1,21],[1,23]]) #false
+# pair_of_shoes([[0,23],[1,21],[1,23],[0,21],[1,22],[0,22]]) #true
+# pair_of_shoes([[0,23],[1,21],[1,23],[0,21]]) #true
+# pair_of_shoes([[0,23],[1,21],[1,22],[0,21]]) #false
+# pair_of_shoes([[0,23]]) #false
