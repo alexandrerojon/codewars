@@ -34,14 +34,12 @@ def pair_of_shoes(shoes)
     desired_foot = []
     desired_foot = opposite_foot
     desired_foot << shoe[1]
-
     if shoes.count(desired_foot) < 1
       return false
     else
       shoes.delete(current_foot)
       shoes.delete(desired_foot)
     end
-
   end
   return true
 end
