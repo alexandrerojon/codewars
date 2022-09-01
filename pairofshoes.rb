@@ -18,6 +18,7 @@
 # the output should be false.
 
 def pair_of_shoes(shoes)
+  # Statement to return false if odd number of shoes given
   return false if shoes.length.odd?
 
   shoes.each do |shoe|

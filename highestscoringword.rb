@@ -6,16 +6,21 @@
 
 
 def high(x)
+  letters = x.split('')
+  final_letters = letters.sort!.join().strip
+  first_letter = final_letters[0]
+  amount = final_letters.count(first_letter)
+  puts amount
 
 end
 
 
 
 high('man i need a taxi up to ubud') #taxi
-high('what time are we climbing up the volcano') #volcano
-high('take me to semynak') #semynak
-high('aa b') #'aa'
-high('b aa') #'b'
-high('bb d') #'bb'
-high('d bb') #'d'
-high('aaa b')  #'aaa'
+# high('what time are we climbing up the volcano') #volcano
+# high('take me to semynak') #semynak
+# high('aa b') #'aa'
+# high('b aa') #'b'
+# high('bb d') #'bb'
+# high('d bb') #'d'
+# high('aaa b')  #'aaa'
