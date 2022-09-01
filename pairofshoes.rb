@@ -24,7 +24,7 @@ def pair_of_shoes(shoes)
   shoes.each do |shoe|
     # Switch statement
     opposite_foot = 0
-    opposite_foot = 1 if shoe[0] == 0
+    opposite_foot = 1 if shoe[0] < 1
 
     # Current comparison array
     current_foot = []
@@ -33,8 +33,10 @@ def pair_of_shoes(shoes)
 
     # Desired foot
     desired_foot = []
-    desired_foot = opposite_foot
+    desired_foot << opposite_foot
     desired_foot << shoe[1]
+
+
     if shoes.count(desired_foot) < 1
       return false
     else
@@ -54,9 +56,9 @@ end
 # puts pair_of_shoes([[0,23]]) #false
 
 # Additional more advanced test cases
-puts pair_of_shoes([[0,23],[1,23]]) #true
-puts pair_of_shoes([[0,23],[1,23],[1,23],[0,23]]) #true
-puts pair_of_shoes([[0,23],[1,22]]) #false
+# puts pair_of_shoes([[0,23],[1,23]]) #true
+# puts pair_of_shoes([[0,23],[1,23],[1,23],[0,23]]) #true
+# puts pair_of_shoes([[0,23],[1,22]]) #false
 puts pair_of_shoes([[0,23],[1,23],[1,23],[0,23],[0,23],[0,23]]) #false
 puts pair_of_shoes([[0,21],[1,23],[0,21],[1,23]]) #false
 puts pair_of_shoes([[1, 42], [0, 42], [1, 33], [0, 33]]) #true
