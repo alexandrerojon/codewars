@@ -26,10 +26,8 @@ def split_the_bill(x)
     total_bill += value
   end
   price_per_person = (total_bill.to_f / x.count)
-
   final_hash = x.map { |key, value| [key, (value = value - price_per_person)] }.to_h
   return final_hash
-
 end
 
 
