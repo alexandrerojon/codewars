@@ -11,4 +11,12 @@ Examples (a, b) --> output (explanation)
 (-1, 2) --> 2 (-1 + 0 + 1 + 2 = 2)
 */
 
-function
+function getSum( a,b )
+{
+   //Good luck!
+
+}
+
+
+getSum(0,-1) //-1
+getSum(0,1) //1
