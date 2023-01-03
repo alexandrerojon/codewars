@@ -13,10 +13,9 @@ DiscoverOriginalPrice(75, 25) => 100.00M where 75 is the sale price (discounted 
 25 is the sale percentage and 100 is the original price
 */
 
-
 function discoverOriginalPrice(discountedPrice, salePercentage){
   const finalSalePercentgage = (100.00 - salePercentage)
-  console.log(discountedPrice / salePercentage)
+  return discountedPrice / finalSalePercentgage
 
 }
 
